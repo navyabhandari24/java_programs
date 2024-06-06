@@ -1,0 +1,25 @@
+class hh extends Thread{
+    public void run(){
+        int i=0;
+        while(i<10){
+            try {
+                Thread.sleep(500);
+            } 
+            catch (Exception e) {
+                // TODO: handle exception
+                System.out.println(e);
+            }
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+
+public class ThreadSleep{
+    public static void main(String[] args) {
+        hh t1 = new hh();
+        hh t2 = new hh();
+        t1.start();
+        t2.start();
+    }
+}
